@@ -74,8 +74,11 @@ function App() {
       document.querySelector('.container').classList.add('vidTime');
       const container = document.getElementById('textContainer');
       container.innerHTML = ''; // Remove all child elements
-      setShowVideo(true)
     }, 8200);
+
+    setTimeout(() => {
+      setShowVideo(true);
+    }, 10000)
   }
 
 
