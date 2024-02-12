@@ -9,8 +9,6 @@ function App() {
   const [noButtonSize, setNoButtonSize] = useState({height: '4.5%', width: '4%'}); // Initial size of the "No" button
   const [noButtonFont, setNoButtonFont] = useState(32);
   const [yesEntines, setYesEntines] = useState(false);
-  const [showVideo, setShowVideo] = useState(false); // State to control video visibility
-
 
   const handleEnvelopeHover = () => {
     setEnvelopeHovered(true);
@@ -40,7 +38,7 @@ function App() {
       setTimeout(() => {
         clearInterval(intervalId); // Stop the interval after 21 seconds
       }, 21000); 
-    }, 2000);
+    }, 3000);
   };  
 
   const handleNoButtonClick = () => {
@@ -63,19 +61,8 @@ function App() {
     document.querySelector('.yes').classList.add('yesEntines');
     document.querySelector('.no').classList.add('yesEntines');
     document.querySelector('.question').classList.add('yesEntines');
-
-    setTimeout(() => {
-      document.querySelector('.container').classList.add('yesEntines');
-      const container = document.getElementById('textContainer');
-      container.innerHTML = ''; // Remove all child elements
-    }, 500);
-
-    setTimeout(() => {
-      document.querySelector('.container').classList.add('vidTime');
-      const container = document.getElementById('textContainer');
-      container.innerHTML = ''; // Remove all child elements
-      setShowVideo(true)
-    }, 8200);
+    document.querySelector('.container').classList.add('yesEntines');
+    document.querySelector('body').classList.add('yesEntines');
   }
 
 
@@ -99,31 +86,8 @@ function App() {
           <div className="four" onMouseEnter={handleEnvelopeHover}></div>
           <div className="five" onMouseEnter={handleEnvelopeHover}></div>
         </div>
-        <div>
-          {yesEntines && (
-          <React.Fragment>
-            <div class="countdown">
-              <div className="uno">1</div>
-              <div className="dos">2</div>
-              <div className="tres">3</div>
-              <div className="cuatro">4</div>
-              <div className="cinco">5</div>
-            </div>
-          </React.Fragment>
-          )}
-        </div>
       </div>
       <div className="shadow"></div>
-    </div>
-    <div>
-      {showVideo && (
-      <React.Fragment>
-        <video id="myVideo" className='video' width="1200" height="1000" controls>
-          <source src="movie.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </React.Fragment>
-      )}
     </div>
     <div>
       {clickEntines && (
@@ -134,13 +98,13 @@ function App() {
       </React.Fragment>
       )}
     </div>
-    <div>
+    {/* <div>
       {yesEntines && (
       <React.Fragment>
-        <div class="sub-background"></div>
+
       </React.Fragment>
       )}
-    </div>
+    </div> */}
     <p className="hover-count">Hover Count: {hoverCount}, clickEntines: {clickEntines===true ? "yes" : "no"}</p>
     <div class="empty-box"></div>
     <div id="textContainer"></div>

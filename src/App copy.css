@@ -131,7 +131,7 @@ body {
   top:265px;
   left:-15px;
   animation: scale 3s linear infinite;
-  z-index:0;
+  z-index:-1;
 }
 
 @keyframes up {
@@ -360,28 +360,28 @@ body {
       opacity: 0;
   }
 }
-@keyframes envelopeCountDown {
+@keyframes changeBackground {
   from {
-    transform: translateY(140px) scale(0.7);
+      background-color: #fae1dd;
   }
   to {
-    transform: translateY(200px) scale(1);
+      background-color: #120000;
   }
 }
-@keyframes number {
-  from{
-    transform: translateY(0) ;
-    opacity: 1;
-  }
-  to{
-    transform: translateY(-200px) ;
-    opacity: 0;
-  }
+@keyframes envelopeCountDown {
+
+}
+@keyframes numberCountDown {
+  
 }
 
 
-.container.yesEntines {
-  animation: envelopeCountDown 1s ease forwards;
+/* .container.yesEntines {
+  animation: fadeOut 1s ease forwards;
+} */
+
+.textContainer.yesEntines {
+  animation: fadeOut 1s ease forwards;
 }
 
 .question.yesEntines {
@@ -392,94 +392,10 @@ body {
   animation: fadeOut 1s ease forwards;
 }
 
+body.yesEntines {
+  animation: changeBackground 1s ease forwards;
+}
+
 .yes.yesEntines {
   animation: fadeOut 1s ease forwards;
-}
-
-.sub-background {
-  z-index: -1;
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background-color: #220500;
-
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-.cinco {
-  position: absolute;
-  top:-50px;
-  left:120px;
-  opacity: 0;
-  font-size: 86px;
-  color: white;
-  animation: 2s number 1s ease-out forwards;
-}
-
-.cuatro {
-  position: absolute;
-  top:10px;
-  left:120px;
-  opacity: 0;
-  font-size: 86px;
-  color: white;
-  animation: 2s number 2.6s ease-out forwards;
-}
-
-.tres {
-  position: absolute;
-  top:10px;
-  left:120px;
-  opacity: 0;
-  font-size: 86px;
-  color: white;
-  animation: 2s number 4.2s ease-out forwards;
-}
-
-.dos {
-  position: absolute;
-  top:10px;
-  left:120px;
-  opacity: 0;
-  font-size: 86px;
-  color: white;
-  animation: 2s number 5.8s ease-out forwards;
-}
-
-.uno {
-  position: absolute;
-  top:10px;
-  left:120px;
-  opacity: 0;
-  font-size: 86px;
-  color: white;
-  animation: 2s number 7.4s ease-out forwards;
-}
-
-
-/* vid time */
-@keyframes envVidTime {
-  from{
-    transform: translateY(200px) ;
-    opacity: 1;
-  }
-  to{
-    transform: translateY(200px) ;
-    opacity: 0;
-  }
-}
-
-.container.yesEntines.vidTime {
-  animation: envVidTime 2s ease-out forwards;
-}
-
-.video {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: fadeIn 2s ease-out forwards;
 }
