@@ -118,7 +118,7 @@ function App() {
     <div>
       {showVideo && (
       <React.Fragment>
-        <video id="myVideo" className='video' width="1200" height="1000" controls>
+        <video id="myVideo" className='video' width="1000" height="800" controls>
           <source src="movie.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
