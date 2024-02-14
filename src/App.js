@@ -74,11 +74,8 @@ function App() {
       document.querySelector('.container').classList.add('vidTime');
       const container = document.getElementById('textContainer');
       container.innerHTML = ''; // Remove all child elements
+      setShowVideo(true)
     }, 8200);
-
-    setTimeout(() => {
-      setShowVideo(true);
-    }, 10000)
   }
 
 
@@ -121,10 +118,11 @@ function App() {
     <div>
       {showVideo && (
       <React.Fragment>
-        <video id="myVideo" className='video' width="1000" height="800" controls>
+        <video id="myVideo" className='video' width="1200" height="1000" controls>
           <source src="movie.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className='Update'>IMPORTANT: you must check Alexia's closet</div>
       </React.Fragment>
       )}
     </div>

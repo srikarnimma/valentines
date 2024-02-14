@@ -483,3 +483,13 @@ body {
   transform: translate(-50%, -50%);
   animation: fadeIn 2s ease-out forwards;
 }
+
+.update {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  opacity: 0;
+  color: white;
+  font-size: 24px;
+  animation: 2s fadeIn 1s ease-out forwards;
+}
