@@ -119,7 +119,7 @@ function App() {
       {showVideo && (
       <React.Fragment>
         <video id="myVideo" className='video' width="1200" height="1000" controls>
-          <source src="movie.mp4" type="video/mp4" />
+          <source src="http://srikarnimma.github.io/valentines/public/movie.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className='update'>IMPORTANT: you must check Alexia's closet</div>
