@@ -488,8 +488,8 @@ body {
   position: absolute;
   left: 5%;
   bottom: 10%;
+  font-size: 24px;
   opacity: 0;
   color: white;
-  font-size: 24px;
   animation: 2s fadeIn 1s ease-out forwards;
 }
