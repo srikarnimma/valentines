@@ -122,6 +122,7 @@ function App() {
           <source src="movie.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className='update'>IMPORTANT: you must check Alexia's closet</div>
       </React.Fragment>
       )}
     </div>
